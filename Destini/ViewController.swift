@@ -44,23 +44,17 @@ class ViewController: UIViewController {
                 storyIndex += 1
             } else {
                 storyTextView.text = stories.story4
-                topButton.isHidden = true
-                bottomButton.isHidden = true
-                storyIndex = 0
+                hideButtons()
             }
             
         } else if storyIndex == 3 {
             
             if sender.tag == 1 {
                 storyTextView.text = stories.story6
-                topButton.isHidden = true
-                bottomButton.isHidden = true
-                storyIndex = 0
+                hideButtons()
             } else {
                 storyTextView.text = stories.story5
-                topButton.isHidden = true
-                bottomButton.isHidden = true
-                storyIndex = 0
+                hideButtons()
             }
             
         }
@@ -70,6 +64,12 @@ class ViewController: UIViewController {
         storyTextView.text = story
         topButton.setTitle(answer1, for: .normal)
         bottomButton.setTitle(answer2, for: .normal)
+    }
+    
+    func hideButtons() {
+        topButton.isHidden = true
+        bottomButton.isHidden = true
+        storyIndex = 0
     }
 }
 
