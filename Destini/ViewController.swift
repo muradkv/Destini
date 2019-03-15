@@ -27,8 +27,8 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        if storyIndex == 1 {
-            
+        switch storyIndex {
+        case 1:
             if sender.tag == 1 {
                 showStory(story: stories.story3, answer1: stories.answer3a, answer2: stories.answer3b)
                 storyIndex += 2
@@ -36,9 +36,7 @@ class ViewController: UIViewController {
                 showStory(story: stories.story2, answer1: stories.answer2a, answer2: stories.answer2b)
                 storyIndex += 1
             }
-            
-        } else if storyIndex == 2 {
-            
+        case 2:
             if sender.tag == 1 {
                 showStory(story: stories.story3, answer1: stories.answer3a, answer2: stories.answer3b)
                 storyIndex += 1
@@ -46,9 +44,7 @@ class ViewController: UIViewController {
                 storyTextView.text = stories.story4
                 hideButtons()
             }
-            
-        } else if storyIndex == 3 {
-            
+        case 3:
             if sender.tag == 1 {
                 storyTextView.text = stories.story6
                 hideButtons()
@@ -56,8 +52,10 @@ class ViewController: UIViewController {
                 storyTextView.text = stories.story5
                 hideButtons()
             }
-            
+        default:
+            break
         }
+        
     }
     
     func showStory(story: String, answer1: String, answer2: String) {
