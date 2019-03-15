@@ -53,11 +53,26 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peR-Xi-KQb"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud5-cI-aEw">
+                                <rect key="frame" x="18" y="597" width="339" height="50"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="caB-uN-4f3"/>
+                                </constraints>
+                                <state key="normal" title="Reset Storyline">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAC-eU-Ave"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cCb-US-A0N" secondAttribute="trailing" constant="18" id="2aP-vI-rO1"/>
+                            <constraint firstItem="Ud5-cI-aEw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="18" id="Aho-8U-9bL"/>
                             <constraint firstItem="gGL-WC-mGS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="18" id="CIe-a7-EWj"/>
+                            <constraint firstAttribute="bottom" secondItem="Ud5-cI-aEw" secondAttribute="bottom" constant="20" id="O4F-q1-nFi"/>
                             <constraint firstAttribute="trailing" secondItem="gGL-WC-mGS" secondAttribute="trailing" constant="18" id="Oel-X8-0ey"/>
                             <constraint firstAttribute="bottom" secondItem="cCb-US-A0N" secondAttribute="bottom" constant="20" id="SLb-TK-MdK"/>
                             <constraint firstItem="Ak0-Bg-2ym" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Sor-GM-jpM"/>
@@ -66,6 +81,7 @@
                             <constraint firstItem="cCb-US-A0N" firstAttribute="top" secondItem="gGL-WC-mGS" secondAttribute="bottom" constant="10" id="ZBZ-5k-Brn"/>
                             <constraint firstItem="bYd-IV-ER7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dGm-ar-fA8"/>
                             <constraint firstAttribute="bottom" secondItem="bYd-IV-ER7" secondAttribute="bottom" id="gKI-ql-D1d"/>
+                            <constraint firstAttribute="trailing" secondItem="Ud5-cI-aEw" secondAttribute="trailing" constant="18" id="gN5-aO-DPW"/>
                             <constraint firstItem="gGL-WC-mGS" firstAttribute="top" secondItem="Ak0-Bg-2ym" secondAttribute="bottom" constant="20" id="nhF-Cu-Q7b"/>
                             <constraint firstItem="Ak0-Bg-2ym" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="18" id="oCX-W3-MIQ"/>
                             <constraint firstItem="bYd-IV-ER7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oD2-tF-hSD"/>
@@ -75,6 +91,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomButton" destination="cCb-US-A0N" id="fb1-th-Xch"/>
+                        <outlet property="resetButton" destination="Ud5-cI-aEw" id="Iuo-K2-fcD"/>
                         <outlet property="storyTextView" destination="Ak0-Bg-2ym" id="BOA-Qz-GAQ"/>
                         <outlet property="topButton" destination="gGL-WC-mGS" id="dyV-bf-aZk"/>
                     </connections>

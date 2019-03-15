@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var storyTextView: UILabel!
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var bottomButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     
     let stories = StoriesData()
     var storyIndex = 1
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
                 hideButtons()
             }
         default:
-            break
+            resetButtons()
         }
         
     }
@@ -67,7 +68,17 @@ class ViewController: UIViewController {
     func hideButtons() {
         topButton.isHidden = true
         bottomButton.isHidden = true
+        resetButton.isHidden = false
         storyIndex = 0
     }
+    
+    func resetButtons() {
+        topButton.isHidden = false
+        bottomButton.isHidden = false
+        resetButton.isHidden = true
+        showStory(story: stories.story1, answer1: stories.answer1a, answer2: stories.answer1b)
+        storyIndex = 1
+    }
+    
 }
 
