@@ -12,6 +12,7 @@
 		FA82DAC8223AF485007FE60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA82DAC6223AF485007FE60E /* Main.storyboard */; };
 		FA82DACA223AF487007FE60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA82DAC9223AF487007FE60E /* Assets.xcassets */; };
 		FA82DACD223AF487007FE60E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA82DACB223AF487007FE60E /* LaunchScreen.storyboard */; };
+		FA82DAD5223C0A48007FE60E /* StoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82DAD4223C0A48007FE60E /* StoriesData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA82DAC9223AF487007FE60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA82DACC223AF487007FE60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA82DACE223AF487007FE60E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA82DAD4223C0A48007FE60E /* StoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				FA82DAC2223AF485007FE60E /* AppDelegate.swift */,
 				FA82DAC4223AF485007FE60E /* ViewController.swift */,
 				FA82DAC6223AF485007FE60E /* Main.storyboard */,
+				FA82DAD4223C0A48007FE60E /* StoriesData.swift */,
 				FA82DAC9223AF487007FE60E /* Assets.xcassets */,
 				FA82DACB223AF487007FE60E /* LaunchScreen.storyboard */,
 				FA82DACE223AF487007FE60E /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				FA82DAC5223AF485007FE60E /* ViewController.swift in Sources */,
 				FA82DAC3223AF485007FE60E /* AppDelegate.swift in Sources */,
+				FA82DAD5223C0A48007FE60E /* StoriesData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
