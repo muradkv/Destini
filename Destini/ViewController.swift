@@ -21,9 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        storyTextView.text = stories.story1
-        topButton.setTitle(stories.answer1a, for: .normal)
-        bottomButton.setTitle(stories.answer1b, for: .normal)
+        showStory(story: stories.story1, answer1: stories.answer1a, answer2: stories.answer1b)
+        
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -31,23 +30,17 @@ class ViewController: UIViewController {
         if storyIndex == 1 {
             
             if sender.tag == 1 {
-                storyTextView.text = stories.story3
-                topButton.setTitle(stories.answer3a, for: .normal)
-                bottomButton.setTitle(stories.answer3b, for: .normal)
+                showStory(story: stories.story3, answer1: stories.answer3a, answer2: stories.answer3b)
                 storyIndex += 2
             } else {
-                storyTextView.text = stories.story2
-                topButton.setTitle(stories.answer2a, for: .normal)
-                bottomButton.setTitle(stories.answer2b, for: .normal)
+                showStory(story: stories.story2, answer1: stories.answer2a, answer2: stories.answer2b)
                 storyIndex += 1
             }
             
         } else if storyIndex == 2 {
             
             if sender.tag == 1 {
-                storyTextView.text = stories.story3
-                topButton.setTitle(stories.answer3a, for: .normal)
-                bottomButton.setTitle(stories.answer3b, for: .normal)
+                showStory(story: stories.story3, answer1: stories.answer3a, answer2: stories.answer3b)
                 storyIndex += 1
             } else {
                 storyTextView.text = stories.story4
@@ -73,5 +66,10 @@ class ViewController: UIViewController {
         }
     }
     
+    func showStory(story: String, answer1: String, answer2: String) {
+        storyTextView.text = story
+        topButton.setTitle(answer1, for: .normal)
+        bottomButton.setTitle(answer2, for: .normal)
+    }
 }
 
