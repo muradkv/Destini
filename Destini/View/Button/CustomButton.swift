@@ -8,10 +8,6 @@
 import UIKit
 
 class CustomButton: UIButton {
-    
-    //MARK: - Properties
-    
-    
 
     //MARK: - Initialization
     
@@ -27,16 +23,32 @@ class CustomButton: UIButton {
     convenience init(title: String, backgroundImage: UIImage?) {
         self.init(frame: .zero)
         setTitle(title, for: .normal)
-        setBackgroundImage(backgroundImage, for: .normal)
+        configuration?.background.image = backgroundImage
     }
     
     //MARK: - Setup
     
     private func setupButton() {
-        translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 10
-        titleLabel?.font = UIFont.systemFont(ofSize: 23)
-        setTitleColor(.white, for: .normal)
+        var configuration = UIButton.Configuration.filled()
+        configuration.baseBackgroundColor = UIColor.clear
+        configuration.contentInsets = NSDirectionalEdgeInsets(
+          top: 0,
+          leading: 20,
+          bottom: 0,
+          trailing: 20
+        )
+        
+        configuration.titleAlignment = .center
+        configuration.background.cornerRadius = 10
+        configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var outgoing = incoming
+            outgoing.font = UIFont.systemFont(ofSize: 23)
+            outgoing.foregroundColor = .white
+            return outgoing
+        }
+        
+        configuration.titleLineBreakMode = .byCharWrapping
+        self.configuration = configuration
     }
     
 }

@@ -39,12 +39,12 @@ class MainView: UIView {
         return label
     }()
     
-    private let choice1Button: UIButton = {
+    let choice1Button: UIButton = {
         let button = CustomButton(title: "Choice 1", backgroundImage: UIImage(named: "choice1Background"))
         return button
     }()
     
-    private let choice2Button: UIButton = {
+    let choice2Button: UIButton = {
         let button = CustomButton(title: "Choice 2", backgroundImage: UIImage(named: "choice2Background"))
         return button
     }()
@@ -83,6 +83,10 @@ class MainView: UIView {
             choice1Button.heightAnchor.constraint(equalToConstant: 100),
             choice2Button.heightAnchor.constraint(equalToConstant: 100),
         ])
+    }
+    
+    func updateStoryText(with text: String) {
+        storyTextLable.text = text
     }
     
 }
